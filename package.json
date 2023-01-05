@@ -22,7 +22,8 @@
     "exec": "./node_modules/.bin/ts-node --files -r tsconfig-paths/register ./src"
   },
   "_moduleAliases": {
-    "@src": "dist"
+    "@src": "dist",
+    "@cypress-pom": "dist"
   },
   "engines": {
     "node": ">=8.10.0"
@@ -46,6 +47,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
     "@types/bcrypt": "^5.0.0",
     "@types/command-line-args": "^5.2.0",
     "@types/cookie-parser": "^1.4.3",

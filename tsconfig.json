@@ -69,10 +69,14 @@
       "@src/*": [
         "src/*"
       ],
+      "@cypress-pom/*": [
+        "cypress-pom/*"
+      ]
     },
     "useUnknownInCatchVariables": false
   },
   "include": [
+    "cypress-pom/**/*.ts",
     "src/**/*.ts",
     "spec/**/*.ts",
     "build.ts"
