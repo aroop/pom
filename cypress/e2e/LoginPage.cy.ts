@@ -1,4 +1,4 @@
-import loginPage from "./pages/LoginPage";
+import loginPage from "../support/pages/LoginPage";
 
 describe("Login", () => {
   beforeEach(() => {
@@ -6,9 +6,9 @@ describe("Login", () => {
   });
 
   it("should log in the user", () => {
-    loginPage.enterEmail("sean.maxwell@gmail.com");
-    loginPage.enterPassword("Password@1");
-    loginPage.submit();
+    loginPage.emailEl.type("sean.maxwell@gmail.com");
+    loginPage.passwordEl.type("Password@1");
+    loginPage.submitButtonEl.click();
 
     // Assert that the user is logged in
     cy.get("#welcome-message").should("contain", "Welcome, Sean Maxwell!");
@@ -16,9 +16,9 @@ describe("Login", () => {
   });
 
   it("should display an error message for invalid login", () => {
-    loginPage.enterEmail("invalid");
-    loginPage.enterPassword("invalid");
-    loginPage.submit();
+    loginPage.emailEl.type("invalid");
+    loginPage.passwordEl.type("invalid");
+    loginPage.submitButtonEl.click();
 
     // Assert that user is not logged in
     cy.get("#welcome-message").should("not.exist");

@@ -4,8 +4,8 @@ import {PomElement} from "./element";
 class PomSection extends PomElement {
 }
 
-const sectionFn = (name: string, selector: string): PomSection => {
-  return new PomSection(selector);
+const sectionFn = (selector: string, parent?: PomElement): PomSection => {
+  return new PomSection(selector, parent);
 }
 
 export {sectionFn, PomSection};
