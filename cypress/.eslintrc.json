@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "cypress",
+    "chai-friendly"
+  ],
+  "rules": {
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
